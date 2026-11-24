@@ -1,0 +1,20 @@
+MIS 15 AÑOS · GLORIA
+
+Estilo disco: portada con bola de espejos 3D animada (gira, refleja luces rosadas y celestes, destellos), haces de luz y reflejos girando por la sala.
+Al tocar la bola: acelera, destello de luz y se abre la invitación con la música (Major Lazer).
+Decoración tomada de su diseño: estrellas con brillo, lazos rosados, lentejuelas plateadas, reloj digital 18:30 y círculos de colores.
+Botones flotantes: animaciones (pausar/reanudar) y música (pausar/continuar).
+
+FECHA: Viernes 11 de diciembre de 2026, 18:30 (cuenta regresiva incluida).
+LUGAR: Calle Marcos Montealegre entre Juan Sandoval y Pablo Montalvo, Pacata Baja, Cochabamba. https://maps.app.goo.gl/A9HJhRo35Ap4VQ7z6
+COLORES RESERVADOS: celeste, rosado y plateado. DRESS CODE: semiformal.
+CONFIRMACIÓN: WhatsApp +591 79950927 (nombre y cantidad de personas).
+
+FOTOS (carpeta fotos/): recortadas solo al rostro. principal.webp va al inicio; cabina-1, -2, -3 forman la tira tipo photo booth.
+La imagen para compartir (portada.jpg) muestra la bola disco, no su foto.
+
+PENDIENTE: nombres de los papás y apellido de Gloria. Se escriben al inicio de invitacion.js:
+  const PADRES = ['Sr. ...', 'Sra. ...'];
+  const APELLIDO = '...';
+
+PUBLICAR: repositorio GLORIA-15 en digitalpro-invitaciones; subir todo (con carpetas fotos y fuentes y .nojekyll); activar GitHub Pages.

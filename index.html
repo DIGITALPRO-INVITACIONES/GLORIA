@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b1e">
+<title>Mis 15 · Gloria</title>
+<meta name="description" content="Prepárate para viajar a otra dimensión llena de brillo. Viernes 11 de diciembre de 2026, 18:30 · Pacata Baja, Cochabamba.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mis 15 · Gloria ✨">
+<meta property="og:description" content="Viernes 11 de diciembre · 18:30 · Toca la bola disco para abrir tu invitación.">
+<meta property="og:image" content="https://digitalpro-invitaciones.github.io/GLORIA-15/portada.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c9ccd6'/%3E%3Ctext x='16' y='21' font-size='13' text-anchor='middle' font-family='Georgia' fill='%23e86fae'%3E15%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fuentes/caligrafia.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="estilo.css">
+<script src="disco.js" defer></script>
+<script src="invitacion.js" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-rosa" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd3ea"/><stop offset=".5" stop-color="#f58cc2"/><stop offset="1" stop-color="#d9609f"/></linearGradient>
+    <linearGradient id="g-plata" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c6cad4"/><stop offset=".7" stop-color="#f4f5f8"/><stop offset="1" stop-color="#9aa0ad"/></linearGradient>
+    <pattern id="p-glitter" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="url(#g-rosa)"/><circle cx="2" cy="2" r="1" fill="#fff" opacity=".8"/><circle cx="6" cy="5" r=".8" fill="#fff" opacity=".6"/><circle cx="4" cy="7" r=".6" fill="#ffe6f3"/></pattern>
+  </defs>
+  <symbol id="estrella" viewBox="0 0 100 100"><path d="M50 4l13 30 33 3-25 22 8 33-29-17-29 17 8-33L4 37l33-3z" fill="url(#p-glitter)" stroke="#ffffff" stroke-width="2"/></symbol>
+  <symbol id="lazo" viewBox="0 0 120 100"><path d="M60 42C44 20 14 8 8 22c-6 15 18 32 48 26zM60 42c16-22 46-34 52-20 6 15-18 32-48 26z" fill="#f7a8cf" stroke="#e17cb0" stroke-width="2"/><path d="M60 42C48 30 26 22 18 26M60 42c12-12 34-20 42-16" stroke="#fff" stroke-opacity=".7" stroke-width="2" fill="none"/><path d="M56 46c-8 14-18 34-26 46l12-2 6 8c6-14 10-32 12-50zM64 46c8 14 18 34 26 46l-12-2-6 8c-6-14-10-32-12-50z" fill="#f7a8cf" stroke="#e17cb0" stroke-width="2"/><ellipse cx="60" cy="44" rx="10" ry="9" fill="#f590c3" stroke="#e17cb0" stroke-width="2"/></symbol>
+  <symbol id="destello" viewBox="0 0 40 40"><path d="M20 0C21 14 26 19 40 20 26 21 21 26 20 40 19 26 14 21 0 20 14 19 19 14 20 0z" fill="#fff"/></symbol>
+</svg>
+
+<audio id="music" src="cancion.mp3" loop preload="none"></audio>
+<div id="brillos" aria-hidden="true"></div>
+
+<!-- PORTADA: BOLA DISCO -->
+<section id="cover" class="cover">
+  <div class="beams" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="reflejos" id="reflejos" aria-hidden="true"></div>
+  <div class="cover-top">
+    <p class="cover-kicker">MIS 15 AÑOS</p>
+    <h1 class="cover-name">Gloria</h1>
+  </div>
+  <div class="ball-zone">
+    <span class="cord" aria-hidden="true"></span>
+    <button class="ball-btn" id="open" aria-label="Tocar la bola disco para abrir la invitación">
+      <canvas id="ball" aria-hidden="true"></canvas>
+    </button>
+    <span class="ball-shadow" aria-hidden="true"></span>
+  </div>
+  <p class="cover-hint"><span class="tap" aria-hidden="true"></span>Toca la bola disco para entrar a la fiesta</p>
+  <p class="cover-date">11 · 12 · 2026</p>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+</section>
+
+<main id="invitation" hidden>
+
+  <!-- MIRADA / PORTADA -->
+  <header class="hero">
+    <svg class="deco star s1" aria-hidden="true"><use href="#estrella"/></svg>
+    <svg class="deco star s2" aria-hidden="true"><use href="#estrella"/></svg>
+    <svg class="deco bow b1" aria-hidden="true"><use href="#lazo"/></svg>
+    <div class="portrait">
+      <div class="ring" aria-hidden="true"></div>
+      <img src="fotos/principal.webp" width="980" height="980" alt="Gloria" fetchpriority="high">
+      <svg class="tw t1" aria-hidden="true"><use href="#destello"/></svg><svg class="tw t2" aria-hidden="true"><use href="#destello"/></svg><svg class="tw t3" aria-hidden="true"><use href="#destello"/></svg>
+    </div>
+    <p class="mis15">mis <b>15</b> años</p>
+    <h2 class="name" tabindex="-1">Gloria</h2>
+    <p class="scroll-hint">Desliza ✦</p>
+  </header>
+
+  <!-- MENSAJE -->
+  <section class="section message reveal">
+    <svg class="deco bow b2" aria-hidden="true"><use href="#lazo"/></svg>
+    <p class="typed">Con la bendición de <b>DIOS</b> y con el amor de mis padres</p>
+    <div class="parents" id="parents" hidden></div>
+    <p class="typed">te invito a festejar</p>
+    <p class="big15">mis 15 años</p>
+    <p class="dimension">Prepárate para viajar a <b>otra dimensión</b> llena de brillo y la mejor música. Ven a celebrar conmigo esta noche inolvidable.</p>
+  </section>
+
+  <!-- FECHA Y CONTADOR -->
+  <section class="section club reveal" id="fecha">
+    <canvas class="mini-ball" aria-hidden="true"></canvas>
+    <p class="neon-kicker">LA NOCHE ES</p>
+    <div class="bigdate"><span>VIERNES</span><b>11</b><span>D I C I E M B R E</span></div>
+    <div class="led" aria-label="Hora: 18:30"><span>18</span><i>:</i><span>30</span></div>
+    <p class="neon-kicker small">FALTAN</p>
+    <div class="countdown" id="countdown" role="timer" aria-label="Cuenta regresiva">
+      <div><b id="days">00</b><span>días</span></div>
+      <div><b id="hours">00</b><span>horas</span></div>
+      <div><b id="minutes">00</b><span>min</span></div>
+      <div><b id="seconds">00</b><span>seg</span></div>
+    </div>
+    <p class="today" id="today" hidden>¡Hoy es la noche!</p>
+    <a class="button ghost" href="mis15.ics" download="Mis-15-Gloria.ics">Guardar en mi calendario</a>
+  </section>
+
+  <!-- LUGAR -->
+  <section class="section place reveal" id="lugar">
+    <svg class="deco star s3" aria-hidden="true"><use href="#estrella"/></svg>
+    <div class="sequin-card">
+      <p class="label">Lugar</p>
+      <p class="address">Calle Marcos Montealegre<br>entre Juan Sandoval y Pablo Montalvo</p>
+      <p class="zone">Pacata Baja · Cochabamba</p>
+      <a class="button" href="https://maps.app.goo.gl/A9HJhRo35Ap4VQ7z6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>Ver ubicación en Google Maps</a>
+    </div>
+  </section>
+
+  <!-- TIRA DE FOTOS -->
+  <section class="section booth-section reveal">
+    <p class="typed small">✦ photo booth ✦</p>
+    <div class="booth">
+      <div class="strip">
+        <figure><img src="fotos/cabina-1.webp" width="550" height="600" alt="Gloria, foto 1" loading="lazy"></figure>
+        <figure><img src="fotos/cabina-3.webp" width="520" height="484" alt="Gloria, foto 2" loading="lazy"></figure>
+        <figure><img src="fotos/cabina-2.webp" width="520" height="466" alt="Gloria, foto 3" loading="lazy"></figure>
+        <p class="strip-foot">Gloria ✦ 15 ✦ 11.12.26</p>
+      </div>
+      <svg class="deco bow b3" aria-hidden="true"><use href="#lazo"/></svg>
+    </div>
+  </section>
+
+  <!-- COLORES -->
+  <section class="section colors reveal">
+    <p class="label">Colores reservados</p>
+    <div class="swatches">
+      <div class="sw celeste"><span></span><p>Celeste</p></div>
+      <div class="sw rosado"><span></span><p>Rosado</p></div>
+      <div class="sw plateado"><span></span><p>Plateado</p></div>
+    </div>
+    <p class="typed">Con cariño te pedimos reservar los tonos <b>celeste, rosado y plateado</b> para la quinceañera.</p>
+  </section>
+
+  <!-- VESTIMENTA -->
+  <section class="section dress reveal">
+    <svg class="deco star s4" aria-hidden="true"><use href="#estrella"/></svg>
+    <p class="label">Dress code</p>
+    <p class="dress-title">Semiformal</p>
+    <div class="dress-icons" aria-hidden="true">
+      <svg viewBox="0 0 64 96"><path d="M26 6c0 5 2 9 6 9s6-4 6-9M26 15l-5 16 6 4-12 40h34L37 35l6-4-5-16"/><path d="M24 31h16"/></svg>
+      <svg viewBox="0 0 64 96"><path d="M20 8l12 12 12-12M20 8L10 16v62h18V46M44 8l10 8v62H36V46M28 46h8M32 20l-3 5 3 22 3-22z"/></svg>
+    </div>
+  </section>
+
+  <!-- MENSAJE FINAL Y CONFIRMACIÓN -->
+  <section class="section rsvp-section reveal" id="confirmar">
+    <canvas class="mini-ball small" aria-hidden="true"></canvas>
+    <p class="gift">Tu compañía es sin duda <b>el mejor regalo</b>.</p>
+    <p class="typed">Con todo cariño te espero, ¡no faltes!</p>
+    <form class="rsvp" id="rsvp">
+      <p class="label">Confirma tu asistencia</p>
+      <label for="guest">Tu nombre</label>
+      <input id="guest" autocomplete="name" placeholder="Escribe tu nombre" maxlength="80">
+      <label for="people">¿Cuántas personas?</label>
+      <select id="people"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+      <button class="button" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" class="wa"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Confirmar por WhatsApp</button>
+      <p class="phone">+591 79950927</p>
+    </form>
+  </section>
+
+  <footer class="closing">
+    <svg class="deco bow b4" aria-hidden="true"><use href="#lazo"/></svg>
+    <p class="see">¡Nos vemos en la pista!</p>
+    <p class="fullname" id="fullname">Gloria</p>
+    <p class="closing-date">11 · 12 · 2026</p>
+    <a class="credit" href="https://digitalpro-invitaciones.github.io/DIGITAL-PRO/" target="_blank" rel="noopener">Invitación digital por <b>Digital Pro</b></a>
+  </footer>
+</main>
+
+<div class="controls" id="controls" hidden>
+  <button id="anim-toggle" class="ctrl" aria-pressed="true" aria-label="Pausar animaciones"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-3.4z"/></svg><span class="slash" aria-hidden="true"></span></button>
+  <button id="music-toggle" class="ctrl" aria-pressed="false" aria-label="Reproducir música"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+</div>
+</body>
+</html>

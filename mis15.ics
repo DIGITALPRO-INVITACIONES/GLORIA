@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Digital Pro//Mis 15 Gloria//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:gloria-15-20261211@digitalpro
+DTSTAMP:20261124T000000Z
+DTSTART:20261211T223000Z
+DTEND:20261212T050000Z
+SUMMARY:Mis 15 años · Gloria
+LOCATION:Calle Marcos Montealegre entre Juan Sandoval y Pablo Montalvo\, Pacata Baja\, Cochabamba
+DESCRIPTION:Dress code: semiformal. Colores celeste\, rosado y plateado reservados para la quinceañera. Confirmaciones: +591 79950927. https://maps.app.goo.gl/A9HJhRo35Ap4VQ7z6
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Mañana son los 15 de Gloria
+END:VALARM
+END:VEVENT
+END:VCALENDAR
