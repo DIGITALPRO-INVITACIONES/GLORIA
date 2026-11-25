@@ -12,6 +12,28 @@ if (PADRES.length) {
 }
 if (APELLIDO) $('#fullname').textContent = 'Gloria ' + APELLIDO;
 
+/* ---------- BOLA DISCO QUE BAILA: teselas curvas ---------- */
+{
+  const g = document.getElementById('tiles'), NS = 'http://www.w3.org/2000/svg';
+  const cx = 120, cy = 108, R = 78, rows = 9, cols = 12, tilt = .28;
+  const shades = ['#ff9ccd', '#f37ab6', '#ffc6e2', '#e9609f', '#ffb3d8', '#fbd9ea'];
+  const P = (la, lo) => { const x = Math.cos(la) * Math.sin(lo), y = Math.sin(la), z = Math.cos(la) * Math.cos(lo);
+    return [cx + x * R, cy - (y * Math.cos(tilt) - z * Math.sin(tilt)) * R, y * Math.sin(tilt) + z * Math.cos(tilt)]; };
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+    const la0 = -Math.PI / 2 + Math.PI * r / rows, la1 = la0 + Math.PI / rows;
+    const lo0 = -Math.PI / 2 + Math.PI * c / cols, lo1 = lo0 + Math.PI / cols;
+    const pts = [P(la0, lo0), P(la0, lo1), P(la1, lo1), P(la1, lo0)];
+    if (pts.every(p => p[2] < 0)) continue;
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', 'M' + pts.map(p => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join('L') + 'Z');
+    const checker = (r + c) % 2 === 0;
+    path.setAttribute('fill', checker ? shades[Math.floor(Math.random() * 2)] : shades[2 + Math.floor(Math.random() * 4)]);
+    path.setAttribute('stroke', '#111'); path.setAttribute('stroke-width', '2');
+    path.style.animationDelay = (-Math.random() * 2.4).toFixed(2) + 's';
+    g.append(path);
+  }
+}
+
 /* ---------- MÚSICA ---------- */
 const music = $('#music'), musicBtn = $('#music-toggle');
 let musicWanted = false;

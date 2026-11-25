@@ -14,7 +14,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c9ccd6'/%3E%3Ctext x='16' y='21' font-size='13' text-anchor='middle' font-family='Georgia' fill='%23e86fae'%3E15%3C/text%3E%3C/svg%3E">
-<link rel="preload" href="fuentes/caligrafia.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuente-caligrafia.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 <script src="disco.js" defer></script>
 <script src="invitacion.js" defer></script>
@@ -28,6 +28,8 @@
   </defs>
   <symbol id="estrella" viewBox="0 0 100 100"><path d="M50 4l13 30 33 3-25 22 8 33-29-17-29 17 8-33L4 37l33-3z" fill="url(#p-glitter)" stroke="#ffffff" stroke-width="2"/></symbol>
   <symbol id="lazo" viewBox="0 0 120 100"><path d="M60 42C44 20 14 8 8 22c-6 15 18 32 48 26zM60 42c16-22 46-34 52-20 6 15-18 32-48 26z" fill="#f7a8cf" stroke="#e17cb0" stroke-width="2"/><path d="M60 42C48 30 26 22 18 26M60 42c12-12 34-20 42-16" stroke="#fff" stroke-opacity=".7" stroke-width="2" fill="none"/><path d="M56 46c-8 14-18 34-26 46l12-2 6 8c6-14 10-32 12-50zM64 46c8 14 18 34 26 46l-12-2-6 8c-6-14-10-32-12-50z" fill="#f7a8cf" stroke="#e17cb0" stroke-width="2"/><ellipse cx="60" cy="44" rx="10" ry="9" fill="#f590c3" stroke="#e17cb0" stroke-width="2"/></symbol>
+  <pattern id="p-plata-glitter" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#9aa0ad"/><circle cx="1.5" cy="1.5" r="1.3" fill="#e9ebf0"/><circle cx="5" cy="4" r="1.1" fill="#ffffff"/><circle cx="3" cy="6" r=".9" fill="#5f6472"/><circle cx="6" cy="1" r=".7" fill="#cfd3dc"/></pattern>
+  <symbol id="labios" viewBox="0 0 160 90"><path d="M6 46C22 26 44 10 64 14c7 1 12 6 16 10 4-4 9-9 16-10 20-4 42 12 58 32-14 3-36 2-74 2S20 49 6 46z" fill="url(#p-plata-glitter)"/><path d="M6 48c34 6 108 6 148-2-10 18-34 38-74 38S16 66 6 48z" fill="url(#p-plata-glitter)"/><path d="M8 47c40 4 104 4 144-1" stroke="#3d404b" stroke-width="2.4" fill="none" stroke-linecap="round"/><g stroke="#4b4f5c" stroke-width="1" opacity=".55" fill="none"><path d="M30 34l4 9M44 24l3 14M58 18l2 18M72 22l1 16M88 22l-1 16M102 18l-2 18M116 24l-3 14M130 34l-4 9"/><path d="M30 58l4 10M46 62l2 14M62 64l1 15M80 65v16M98 64l-1 15M114 62l-2 14M130 58l-4 10"/></g><path d="M40 22c10-4 18-2 24 2M98 22c8-4 16-3 24 2M50 70c14 6 44 6 60 0" stroke="#fff" stroke-opacity=".7" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
   <symbol id="destello" viewBox="0 0 40 40"><path d="M20 0C21 14 26 19 40 20 26 21 21 26 20 40 19 26 14 21 0 20 14 19 19 14 20 0z" fill="#fff"/></symbol>
 </svg>
 
@@ -60,11 +62,14 @@
   <header class="hero">
     <svg class="deco star s1" aria-hidden="true"><use href="#estrella"/></svg>
     <svg class="deco star s2" aria-hidden="true"><use href="#estrella"/></svg>
+    <div class="deco sequins sq1" aria-hidden="true"></div>
     <svg class="deco bow b1" aria-hidden="true"><use href="#lazo"/></svg>
+    <img class="deco lips l1" src="labios.png" width="520" height="274" alt="" aria-hidden="true">
     <div class="portrait">
       <div class="ring" aria-hidden="true"></div>
-      <img src="fotos/principal.webp" width="980" height="980" alt="Gloria" fetchpriority="high">
-      <svg class="tw t1" aria-hidden="true"><use href="#destello"/></svg><svg class="tw t2" aria-hidden="true"><use href="#destello"/></svg><svg class="tw t3" aria-hidden="true"><use href="#destello"/></svg>
+      <img src="foto-principal.jpg" width="980" height="980" alt="Gloria" fetchpriority="high">
+      <div class="reflex" aria-hidden="true"><i></i><i></i></div>
+      <span class="flare f1" aria-hidden="true"></span><span class="flare f2" aria-hidden="true"></span><span class="flare f3" aria-hidden="true"></span><span class="flare f4" aria-hidden="true"></span><span class="flare f5" aria-hidden="true"></span>
     </div>
     <p class="mis15">mis <b>15</b> años</p>
     <h2 class="name" tabindex="-1">Gloria</h2>
@@ -74,16 +79,16 @@
   <!-- MENSAJE -->
   <section class="section message reveal">
     <svg class="deco bow b2" aria-hidden="true"><use href="#lazo"/></svg>
-    <p class="typed">Con la bendición de <b>DIOS</b> y con el amor de mis padres</p>
-    <div class="parents" id="parents" hidden></div>
-    <p class="typed">te invito a festejar</p>
+    <img class="deco lips l2" src="labios.png" width="520" height="274" alt="" aria-hidden="true">
+    <p class="typed">Con la bendición de <b>DIOS</b> y con el amor de mis padres te invito a festejar</p>
     <p class="big15">mis 15 años</p>
+    <div class="parents" id="parents" hidden></div>
     <p class="dimension">Prepárate para viajar a <b>otra dimensión</b> llena de brillo y la mejor música. Ven a celebrar conmigo esta noche inolvidable.</p>
   </section>
 
   <!-- FECHA Y CONTADOR -->
   <section class="section club reveal" id="fecha">
-    <canvas class="mini-ball" aria-hidden="true"></canvas>
+    <div class="ball-bow"><canvas class="mini-ball" aria-hidden="true"></canvas><svg class="mini-bow" aria-hidden="true"><use href="#lazo"/></svg></div>
     <p class="neon-kicker">LA NOCHE ES</p>
     <div class="bigdate"><span>VIERNES</span><b>11</b><span>D I C I E M B R E</span></div>
     <div class="led" aria-label="Hora: 18:30"><span>18</span><i>:</i><span>30</span></div>
@@ -95,12 +100,12 @@
       <div><b id="seconds">00</b><span>seg</span></div>
     </div>
     <p class="today" id="today" hidden>¡Hoy es la noche!</p>
-    <a class="button ghost" href="mis15.ics" download="Mis-15-Gloria.ics">Guardar en mi calendario</a>
   </section>
 
   <!-- LUGAR -->
   <section class="section place reveal" id="lugar">
     <svg class="deco star s3" aria-hidden="true"><use href="#estrella"/></svg>
+    <img class="deco lips l3" src="labios.png" width="520" height="274" alt="" aria-hidden="true">
     <div class="sequin-card">
       <p class="label">Lugar</p>
       <p class="address">Calle Marcos Montealegre<br>entre Juan Sandoval y Pablo Montalvo</p>
@@ -114,9 +119,9 @@
     <p class="typed small">✦ photo booth ✦</p>
     <div class="booth">
       <div class="strip">
-        <figure><img src="fotos/cabina-1.webp" width="550" height="600" alt="Gloria, foto 1" loading="lazy"></figure>
-        <figure><img src="fotos/cabina-3.webp" width="520" height="484" alt="Gloria, foto 2" loading="lazy"></figure>
-        <figure><img src="fotos/cabina-2.webp" width="520" height="466" alt="Gloria, foto 3" loading="lazy"></figure>
+        <figure><img src="foto-cabina-1.jpg" width="550" height="600" alt="Gloria, foto 1" loading="lazy"></figure>
+        <figure><img src="foto-cabina-3.jpg" width="520" height="484" alt="Gloria, foto 2" loading="lazy"></figure>
+        <figure><img src="foto-cabina-2.jpg" width="520" height="466" alt="Gloria, foto 3" loading="lazy"></figure>
         <p class="strip-foot">Gloria ✦ 15 ✦ 11.12.26</p>
       </div>
       <svg class="deco bow b3" aria-hidden="true"><use href="#lazo"/></svg>
@@ -132,16 +137,50 @@
       <div class="sw plateado"><span></span><p>Plateado</p></div>
     </div>
     <p class="typed">Con cariño te pedimos reservar los tonos <b>celeste, rosado y plateado</b> para la quinceañera.</p>
+    <p class="no-shine"><span class="ns-icon" aria-hidden="true">✦</span>Evitar cualquier tipo de brillo en tu prenda, ese brillo está reservado para la Quinceañera.</p>
   </section>
 
   <!-- VESTIMENTA -->
   <section class="section dress reveal">
     <svg class="deco star s4" aria-hidden="true"><use href="#estrella"/></svg>
+    <img class="deco lips l4" src="labios.png" width="520" height="274" alt="" aria-hidden="true">
     <p class="label">Dress code</p>
-    <p class="dress-title">Semiformal</p>
-    <div class="dress-icons" aria-hidden="true">
-      <svg viewBox="0 0 64 96"><path d="M26 6c0 5 2 9 6 9s6-4 6-9M26 15l-5 16 6 4-12 40h34L37 35l6-4-5-16"/><path d="M24 31h16"/></svg>
-      <svg viewBox="0 0 64 96"><path d="M20 8l12 12 12-12M20 8L10 16v62h18V46M44 8l10 8v62H36V46M28 46h8M32 20l-3 5 3 22 3-22z"/></svg>
+    <p class="dress-title">Formal</p>
+    <div class="outfits">
+      <figure class="outfit">
+        <svg viewBox="0 0 160 260" role="img" aria-label="Vestido largo de fiesta">
+          <defs>
+            <linearGradient id="vest" x1="0" x2="1"><stop offset="0" stop-color="#3b2147"/><stop offset=".45" stop-color="#6b3f7d"/><stop offset=".6" stop-color="#5a3369"/><stop offset="1" stop-color="#2c1736"/></linearGradient>
+            <linearGradient id="vest2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3f7d"/><stop offset="1" stop-color="#3b2147"/></linearGradient>
+          </defs>
+          <path d="M80 6v10" stroke="#8d93a1" stroke-width="2"/><path d="M80 16c-4 0-6 3-6 6" stroke="#8d93a1" stroke-width="2" fill="none"/>
+          <path d="M48 30c10-6 22-8 32-8s22 2 32 8l-8 4H56z" fill="none" stroke="#8d93a1" stroke-width="2"/>
+          <path d="M60 32c4 10 10 16 20 16s16-6 20-16l6 4c-4 18-6 34-6 48H60c0-14-2-30-6-48z" fill="url(#vest2)"/>
+          <path d="M60 84h40l-2 6H62z" fill="#2c1736"/>
+          <path d="M62 90h36c10 40 30 90 50 160H12C32 180 52 130 62 90z" fill="url(#vest)"/>
+          <path d="M80 92c-4 50-14 110-30 158M80 92c4 50 14 110 30 158M72 92c-12 50-30 110-46 158M88 92c12 50 30 110 46 158" stroke="#8a5b9c" stroke-opacity=".5" stroke-width="1.4" fill="none"/>
+          <path d="M12 250c20 6 40-2 68 2s48 4 68-2" stroke="#2c1736" stroke-width="3" fill="none"/>
+        </svg>
+        <figcaption><b>Damas</b>Vestido largo formal</figcaption>
+      </figure>
+      <figure class="outfit">
+        <svg viewBox="0 0 160 260" role="img" aria-label="Traje formal con corbata de moño">
+          <defs><linearGradient id="saco" x1="0" x2="1"><stop offset="0" stop-color="#1b1d26"/><stop offset=".5" stop-color="#363a48"/><stop offset="1" stop-color="#14161d"/></linearGradient></defs>
+          <path d="M80 6v10" stroke="#8d93a1" stroke-width="2"/><path d="M80 16c-4 0-6 3-6 6" stroke="#8d93a1" stroke-width="2" fill="none"/>
+          <path d="M34 34c14-8 30-12 46-12s32 4 46 12l-10 4H44z" fill="none" stroke="#8d93a1" stroke-width="2"/>
+          <path d="M66 34h28l-4 60H70z" fill="#f4f5f8"/>
+          <path d="M70 40l10 10 10-10-10 4z" fill="#d9609f" opacity="0"/>
+          <path d="M71 44l9 5 9-5v10l-9-5-9 5z" fill="#1b1d26"/><circle cx="80" cy="49" r="2.6" fill="#1b1d26"/>
+          <path d="M40 36l26-4 14 60 14-60 26 4 10 40-4 66H100l-4 10H64l-4-10H34l-4-66z" fill="url(#saco)"/>
+          <path d="M66 32l14 60-24-34zM94 32L80 92l24-34z" fill="#0e0f14"/>
+          <path d="M66 32l-10 26 10 6M94 32l10 26-10 6" stroke="#4a4f60" stroke-width="1.5" fill="none"/>
+          <circle cx="80" cy="104" r="2.6" fill="#6a6f80"/><circle cx="80" cy="120" r="2.6" fill="#6a6f80"/>
+          <path d="M98 70h12" stroke="#f4f5f8" stroke-width="3"/>
+          <path d="M60 152h40l6 98H86l-6-80-6 80H54z" fill="#1b1d26"/>
+          <path d="M80 160v10" stroke="#363a48" stroke-width="1.5"/>
+        </svg>
+        <figcaption><b>Caballeros</b>Traje formal y corbata</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -162,8 +201,48 @@
   </section>
 
   <footer class="closing">
-    <svg class="deco bow b4" aria-hidden="true"><use href="#lazo"/></svg>
-    <p class="see">¡Nos vemos en la pista!</p>
+    <div class="deco sequins sq2" aria-hidden="true"></div>
+    <img class="deco lips l5" src="labios.png" width="520" height="274" alt="" aria-hidden="true">
+    <div class="dancer" aria-hidden="true">
+      <svg viewBox="-20 -20 280 320">
+        <defs>
+          <filter id="sticker" x="-20%" y="-20%" width="140%" height="140%">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="7" result="out"/>
+            <feFlood flood-color="#ffffff"/><feComposite in2="out" operator="in" result="white"/>
+            <feGaussianBlur in="out" stdDeviation="5" result="sh"/><feOffset in="sh" dy="6" result="sh2"/>
+            <feFlood flood-color="#7a2a55" flood-opacity=".35"/><feComposite in2="sh2" operator="in" result="shadow"/>
+            <feMerge><feMergeNode in="shadow"/><feMergeNode in="white"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="esfera"><circle cx="120" cy="108" r="78"/></clipPath>
+        </defs>
+        <g filter="url(#sticker)">
+          <g class="leg-l"><path d="M96 180c-4 26-10 44-18 60" stroke="#111" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M52 246c-2-10 8-18 24-16l14 2c6 1 8 6 7 12l-1 8H52z" fill="#fff" stroke="#111" stroke-width="4"/><path d="M50 252h47v8H50z" fill="#f58cc2" stroke="#111" stroke-width="4"/><path d="M66 236l10 2M68 243l10 1" stroke="#f58cc2" stroke-width="3"/></g>
+          <g class="leg-r"><path d="M144 180c6 24 14 42 24 58" stroke="#111" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M152 244c0-10 10-16 26-13l12 3c6 2 8 7 6 12l-2 8h-42z" fill="#fff" stroke="#111" stroke-width="4"/><path d="M151 252h45v8h-45z" fill="#f58cc2" stroke="#111" stroke-width="4"/><path d="M166 236l10 2M167 243l10 1" stroke="#f58cc2" stroke-width="3"/></g>
+          <g class="arm-l"><path d="M46 118c-18 8-30 24-36 44" stroke="#111" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <g transform="translate(6 168)"><circle r="12" fill="#fff" stroke="#111" stroke-width="4"/><path d="M-6-2c3 2 9 2 12 0M-5 4c3 2 7 2 10 0" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="-11" cy="-5" rx="5" ry="4" fill="#fff" stroke="#111" stroke-width="3"/></g></g>
+          <g class="arm-r"><path d="M194 96c14-12 22-30 24-52" stroke="#111" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <g transform="translate(219 34)"><circle r="12" fill="#fff" stroke="#111" stroke-width="4"/><path d="M-6-2c3 2 9 2 12 0M-5 4c3 2 7 2 10 0" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="11" cy="-5" rx="5" ry="4" fill="#fff" stroke="#111" stroke-width="3"/></g>
+            <path class="spark" d="M236 4l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#f58cc2" stroke="#111" stroke-width="1.5"/></g>
+          <g class="body">
+            <circle cx="120" cy="108" r="78" fill="#f7a6cf"/>
+            <g clip-path="url(#esfera)" id="tiles"></g>
+            <circle cx="120" cy="108" r="78" fill="none" stroke="#111" stroke-width="5"/>
+            <g class="glasses">
+              <path d="M84 84c-6-10-24-10-26 4-2 14 18 24 26 30 8-6 28-16 26-30-2-14-20-14-26-4z" fill="#ff7fc0" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M156 84c-6-10-24-10-26 4-2 14 18 24 26 30 8-6 28-16 26-30-2-14-20-14-26-4z" fill="#ff7fc0" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M84 91c-4-6-14-6-15 2-1 8 10 14 15 17 5-3 16-9 15-17-1-8-11-8-15-2z" fill="#111"/>
+              <path d="M156 91c-4-6-14-6-15 2-1 8 10 14 15 17 5-3 16-9 15-17-1-8-11-8-15-2z" fill="#111"/>
+              <path d="M110 92c6-4 14-4 20 0" stroke="#111" stroke-width="4" fill="none"/>
+              <path d="M73 92l4-3M145 92l4-3" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <path d="M100 138c12 12 30 12 42 0" stroke="#111" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <p class="see">¡Nos vemos en la fiesta!</p>
     <p class="fullname" id="fullname">Gloria</p>
     <p class="closing-date">11 · 12 · 2026</p>
     <a class="credit" href="https://digitalpro-invitaciones.github.io/DIGITAL-PRO/" target="_blank" rel="noopener">Invitación digital por <b>Digital Pro</b></a>
