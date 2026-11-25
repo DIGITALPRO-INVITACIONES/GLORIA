@@ -322,3 +322,6 @@ body.still *,body.still *::before,body.still *::after{animation-play-state:pause
 @keyframes tile{50%{opacity:.55}}
 .see{font-family:var(--serif);font-size:1.35rem;letter-spacing:.12em;text-transform:none;color:var(--tinta);margin-top:4px}
 .dancer .spark{animation:twinkle 1.6s ease-in-out infinite;transform-origin:236px 14px}
+/* Fecha: "11" con números claros */
+.bigdate b{font-family:var(--digital);font-weight:700;font-size:5.6rem;letter-spacing:.04em;padding:.12em .2em .08em;margin:-.12em -.2em -.08em}
+.outfit{padding:18px 8px}
